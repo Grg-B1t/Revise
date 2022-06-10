@@ -1,11 +1,19 @@
+import java.util.ArrayList;
+
 class Main{
-    public static void main(String[] args) {
-        Teacher t1 = new Teacher("Douglus", 32, "Comupter Science");
+        public static void main(String[] args) {
+        ArrayList<StudentData> sd = new ArrayList<>();
+        sd.add(new StudentData(1, 3.5, "Sam", 20, "Computer Science"));
 
-        Student s1 = new Student("Sam", 22, "Computer Science", 3.5);
+        ArrayList<TeacherData> td = new ArrayList<>();
+        td.add(new TeacherData(1, "Douglus", 32, "Computer Science"));
 
-        t1.intro();
-        s1.intro();
+       Student s = new Student(sd.get(0)); 
+       Teacher t = new Teacher(td.get(0));
+
+       s.intro();
+       System.out.println("----------------------------");
+       t.intro();
 
     }
 }
